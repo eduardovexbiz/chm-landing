@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Black Sushi</title>
+<meta name="description" content="Black Sushi: sushi de autor, fresco y hecho al momento.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#0a0a0a}
+html{scroll-behavior:smooth}
+a{color:#f3eee6;text-decoration:none}a:hover{color:#F2814B}
+.bs *{box-sizing:border-box}
+.ease{transition:all .6s cubic-bezier(.2,.7,.2,1)}
+@keyframes up{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(6px,-10px)}}
+@keyframes line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.in{opacity:0;animation:up 1s cubic-bezier(.2,.7,.2,1) forwards}
+.d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}.d4{animation-delay:.55s}.d5{animation-delay:.7s}.d6{animation-delay:.85s}
+.plateWrap{opacity:0;animation:fade 1.4s ease .3s forwards,float 7s ease-in-out 1.7s infinite}
+.spin{transform-origin:280px 280px;animation:spin 90s linear infinite}
+.seed{animation:drift 6s ease-in-out infinite}
+.rule{transform-origin:left;animation:line 1.2s cubic-bezier(.2,.7,.2,1) .6s both}
+.marq{display:flex;width:max-content;animation:marquee 38s linear infinite}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 22px;border-radius:6px;font:600 13px/1 Manrope,sans-serif;letter-spacing:.08em;text-transform:uppercase;transition:all .4s cubic-bezier(.2,.7,.2,1)}
+.btn svg{transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.btn:hover svg{transform:translateX(5px)}
+.btnP{background:#F2814B;color:#0a0a0a}.btnP:hover{background:#ff9a68;color:#0a0a0a;box-shadow:0 10px 30px -10px rgba(242,129,75,.6)}
+.btnG{border:1px solid #3a3a3a;color:#f3eee6}.btnG:hover{border-color:#F2814B;color:#F2814B}
+.nav a{position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:#F2814B;transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.nav a:hover::after{transform:scaleX(1)}
+.card{transition:transform .6s cubic-bezier(.2,.7,.2,1),border-color .6s,box-shadow .6s}
+.card:hover{transform:translateY(-10px);border-color:#F2814B;box-shadow:0 30px 60px -30px rgba(242,129,75,.35)}
+.card .pic svg{transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.card:hover .pic svg{transform:scale(1.07) rotate(-2deg)}
+.add{transition:all .4s}.card:hover .add{background:#F2814B;color:#0a0a0a;border-color:#F2814B}
+.quote{transition:transform .6s cubic-bezier(.2,.7,.2,1),border-color .6s}.quote:hover{transform:translateY(-6px);border-color:#F2814B}
+.soc{transition:all .4s}.soc:hover{background:#F2814B;color:#0a0a0a;border-color:#F2814B}
+@supports (animation-timeline: view()){
+.rv{animation:up linear both;animation-timeline:view();animation-range:entry 5% cover 28%}
+.rv2{animation:up linear both;animation-timeline:view();animation-range:entry 15% cover 35%}
+.rv3{animation:up linear both;animation-timeline:view();animation-range:entry 25% cover 42%}
+.rv4{animation:up linear both;animation-timeline:view();animation-range:entry 35% cover 50%}
+}
+@media (prefers-reduced-motion: reduce){
+.in,.plateWrap,.rv,.rv2,.rv3,.rv4,.rule{animation:none;opacity:1}
+.spin,.seed,.marq{animation:none}
+}
+</style>
+
+</head>
+<body>
+
+<div class="bs" style="background: #0a0a0a; color: #f3eee6; font-family: Manrope, sans-serif; overflow: hidden">
+
+<!-- NAV -->
+<header style="max-width: 1240px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px">
+<a href="#inicio" class="in" style="display: flex; align-items: center; gap: 12px">
+<svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="none" stroke="#F2814B" stroke-width="1.5"></circle><circle cx="17" cy="17" r="7" fill="#F2814B"></circle></svg>
+<span style="font-family: 'Shippori Mincho', serif; font-weight: 800; font-size: 22px; letter-spacing: .06em">BLACK SUSHI</span>
+</a>
+<nav class="nav in d1" aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 32px; font-size: 13px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase">
+<a href="#inicio">Inicio</a>
+<a href="#menu">Menú</a>
+<a href="#historia">Nosotros</a>
+<a href="#resenas">Reseñas</a>
+<a href="#contacto">Contacto</a>
+</nav>
+<a href="https://www.instagram.com/blacksushi.ve/" class="btn btnG in d2">Pedir ahora</a>
+</header>
+
+<!-- HERO -->
+<section id="inicio" style="max-width: 1240px; margin: 0 auto; padding: 40px 24px 80px; display: flex; flex-wrap: wrap; align-items: center; gap: 48px">
+<div style="flex: 1 1 440px; min-width: 0">
+<div class="in d1" style="display: flex; align-items: center; gap: 14px; color: #F2814B; font-size: 12px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase">
+<span style="width: 36px; height: 1px; background: #F2814B"></span>Sushi de autor · 黒
+</div>
+<h1 class="in d2" style="margin: 22px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 800; font-size: clamp(48px, 7vw, 92px); line-height: 1; letter-spacing: -.01em">Sushi con<br><span style="color: #F2814B">carácter.</span></h1>
+<div class="rule" style="width: 280px; max-width: 100%; height: 1px; margin: 32px 0; background: linear-gradient(90deg,#F2814B,transparent)"></div>
+<p class="in d3" style="margin: 0; max-width: 420px; color: #a39e96; font-size: 17px; line-height: 1.65">Rolls, nigiris y sashimi preparados al momento, con ingredientes frescos y el toque oscuro que nos define.</p>
+<div class="in d4" style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px">
+<a href="https://www.instagram.com/blacksushi.ve/" class="btn btnP">Pedir por delivery <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="#menu" class="btn btnG">Ver el menú</a>
+</div>
+<div class="in d5" style="display: flex; flex-wrap: wrap; gap: 28px; margin-top: 56px">
+<div style="display: flex; gap: 12px; align-items: flex-start">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F2814B" stroke-width="1.6" aria-hidden="true"><path d="M3 12c4-6 14-6 18 0-4 6-14 6-18 0z"></path><circle cx="12" cy="12" r="2.5"></circle></svg>
+<div><div style="color: #F2814B; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase">Pescado fresco</div><div style="color: #a39e96; font-size: 13px; margin-top: 4px">Selección diaria</div></div>
+</div>
+<div style="display: flex; gap: 12px; align-items: flex-start">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F2814B" stroke-width="1.6" aria-hidden="true"><path d="M4 20 20 4M7 20 21 6"></path></svg>
+<div><div style="color: #F2814B; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase">Hecho al momento</div><div style="color: #a39e96; font-size: 13px; margin-top: 4px">Por nuestros sushimen</div></div>
+</div>
+<div style="display: flex; gap: 12px; align-items: flex-start">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F2814B" stroke-width="1.6" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"></path><circle cx="7" cy="18" r="2"></circle><circle cx="17" cy="18" r="2"></circle></svg>
+<div><div style="color: #F2814B; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase">Delivery</div><div style="color: #a39e96; font-size: 13px; margin-top: 4px">[ZONAS DE ENTREGA]</div></div>
+</div>
+</div>
+</div>
+
+<div style="flex: 1 1 460px; min-width: 0; position: relative; display: flex; justify-content: center">
+<div class="plateWrap" style="width: 100%; max-width: 560px">
+<svg viewBox="0 0 560 560" style="width: 100%; height: auto; display: block" role="img" aria-label="Plato de sushi ilustrado (referencia)">
+<defs>
+<radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#F2814B" stop-opacity=".18"></stop><stop offset="100%" stop-color="#F2814B" stop-opacity="0"></stop></radialGradient>
+<radialGradient id="plate" cx="40%" cy="35%" r="70%"><stop offset="0%" stop-color="#232323"></stop><stop offset="100%" stop-color="#0c0c0c"></stop></radialGradient>
+</defs>
+<circle cx="280" cy="280" r="278" fill="url(#glow)"></circle>
+<circle cx="280" cy="280" r="248" fill="url(#plate)" stroke="#2c2c2c" stroke-width="2"></circle>
+<circle cx="280" cy="280" r="214" fill="#0e0e0e" stroke="#1f1f1f" stroke-width="1"></circle>
+<g class="spin">
+<g transform="translate(200 175) rotate(-28)"><ellipse rx="46" ry="21" fill="#efe9df"></ellipse><path d="M-52 -6C-32 -32 32 -32 54 -8C42 5-42 7-52-6Z" fill="#F2814B"></path><path d="M-32-17-24 1M-11-21-3-1M10-21 18-1M31-17 37-3" stroke="#ffd2bb" stroke-width="3.5" stroke-linecap="round" opacity=".75"></path></g>
+<g transform="translate(300 140) rotate(8)"><ellipse rx="46" ry="21" fill="#efe9df"></ellipse><path d="M-52 -6C-32 -32 32 -32 54 -8C42 5-42 7-52-6Z" fill="#F2814B"></path><path d="M-32-17-24 1M-11-21-3-1M10-21 18-1M31-17 37-3" stroke="#ffd2bb" stroke-width="3.5" stroke-linecap="round" opacity=".75"></path></g>
+<g transform="translate(395 205) rotate(40)"><ellipse rx="46" ry="21" fill="#efe9df"></ellipse><path d="M-52 -6C-32 -32 32 -32 54 -8C42 5-42 7-52-6Z" fill="#e8673a"></path><path d="M-32-17-24 1M-11-21-3-1M10-21 18-1M31-17 37-3" stroke="#ffc3a6" stroke-width="3.5" stroke-linecap="round" opacity=".75"></path></g>
+<g transform="translate(160 315)"><circle r="34" fill="#151b15"></circle><circle r="28" fill="#f1ece3"></circle><circle r="11" cx="-4" cy="-2" fill="#F2814B"></circle><ellipse rx="6" ry="9" cx="9" cy="5" fill="#8fbf5a"></ellipse></g>
+<g transform="translate(232 372)"><circle r="34" fill="#151b15"></circle><circle r="28" fill="#f1ece3"></circle><circle r="11" cx="-4" cy="-2" fill="#F2814B"></circle><ellipse rx="6" ry="9" cx="9" cy="5" fill="#8fbf5a"></ellipse></g>
+<g transform="translate(312 390)"><circle r="34" fill="#151b15"></circle><circle r="28" fill="#f1ece3"></circle><circle r="11" cx="-4" cy="-2" fill="#F2814B"></circle><ellipse rx="6" ry="9" cx="9" cy="5" fill="#8fbf5a"></ellipse></g>
+<g transform="translate(388 345)"><circle r="34" fill="#151b15"></circle><circle r="28" fill="#f1ece3"></circle><circle r="11" cx="-4" cy="-2" fill="#F2814B"></circle><ellipse rx="6" ry="9" cx="9" cy="5" fill="#8fbf5a"></ellipse></g>
+<g transform="translate(285 265)"><circle r="48" fill="#1a1a1a" stroke="#333" stroke-width="2"></circle><circle r="37" fill="#3b1a0b"></circle><ellipse rx="14" ry="6" cx="-10" cy="-12" fill="#fff" opacity=".12"></ellipse></g>
+<path d="M420 420c10-14 34-10 32 6-2 14-26 18-34 8-3-4-2-10 2-14z" fill="#8fbf5a"></path>
+<g fill="#f4b5a3" opacity=".9"><path d="M130 410c12-16 34-10 30 6-10 6-24 6-30-6z"></path><path d="M148 432c14-12 34-2 26 12-12 4-24 0-26-12z"></path><path d="M120 436c16-6 30 8 18 18-12 0-20-6-18-18z"></path></g>
+<g fill="#e9e1d2"><circle cx="210" cy="250" r="2"></circle><circle cx="350" cy="300" r="2"></circle><circle cx="255" cy="320" r="1.6"></circle><circle cx="360" cy="140" r="1.8"></circle></g>
+</g>
+<g transform="rotate(-38 280 280)"><rect x="40" y="246" width="480" height="9" rx="4.5" fill="#c99a5b"></rect><rect x="40" y="266" width="480" height="9" rx="4.5" fill="#b8874a"></rect><rect x="40" y="246" width="70" height="9" rx="4" fill="#1a1a1a"></rect><rect x="40" y="266" width="70" height="9" rx="4" fill="#1a1a1a"></rect></g>
+</svg>
+</div>
+<div class="seed" style="position: absolute; top: 6%; right: 8%; width: 8px; height: 8px; border-radius: 50%; background: #F2814B"></div>
+<div class="seed" style="position: absolute; bottom: 14%; left: 4%; width: 5px; height: 5px; border-radius: 50%; background: #e9e1d2; animation-delay: 1.5s"></div>
+<div class="in d6" style="position: absolute; right: 0; bottom: 4%; width: 116px; height: 116px; border-radius: 50%; border: 1px solid #F2814B; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background: rgba(10,10,10,.7)">
+<div style="font-size: 10px; letter-spacing: .2em; color: #a39e96">DESDE [AÑO]</div>
+<div style="font-family: 'Shippori Mincho', serif; font-weight: 800; font-size: 26px; color: #F2814B; margin-top: 4px">黒</div>
+<div style="font-size: 10px; letter-spacing: .2em; color: #a39e96; margin-top: 4px">BLACK SUSHI</div>
+</div>
+</div>
+</section>
+
+<!-- MARQUEE -->
+<div aria-hidden="true" style="border-top: 1px solid #1f1f1f; border-bottom: 1px solid #1f1f1f; padding: 22px 0; overflow: hidden">
+<div class="marq" style="font-family: 'Shippori Mincho', serif; font-weight: 600; font-size: 28px; color: #3d3a36; gap: 48px; white-space: nowrap">
+<span>Uramaki</span><span style="color: #F2814B">●</span><span>Nigiri</span><span style="color: #F2814B">●</span><span>Sashimi</span><span style="color: #F2814B">●</span><span>Tempura roll</span><span style="color: #F2814B">●</span><span>Temaki</span><span style="color: #F2814B">●</span><span>Poke</span><span style="color: #F2814B">●</span>
+<span>Uramaki</span><span style="color: #F2814B">●</span><span>Nigiri</span><span style="color: #F2814B">●</span><span>Sashimi</span><span style="color: #F2814B">●</span><span>Tempura roll</span><span style="color: #F2814B">●</span><span>Temaki</span><span style="color: #F2814B">●</span><span>Poke</span><span style="color: #F2814B">●</span>
+</div>
+</div>
+
+<!-- SIGNATURE -->
+<section id="menu" style="max-width: 1240px; margin: 0 auto; padding: 120px 24px 40px; text-align: center">
+<div class="rv" style="display: inline-flex; align-items: center; gap: 14px; color: #F2814B; font-size: 12px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase"><span style="width: 30px; height: 1px; background: #F2814B"></span>Favoritos de la casa<span style="width: 30px; height: 1px; background: #F2814B"></span></div>
+<h2 class="rv" style="margin: 18px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 800; font-size: clamp(36px, 4.6vw, 56px); line-height: 1.1">Colección <span style="color: #F2814B">Black</span></h2>
+<p class="rv" style="margin: 16px auto 0; max-width: 520px; color: #a39e96; font-size: 16px; line-height: 1.6">Lo que más piden nuestros clientes. Imágenes de referencia hasta tener las fotos reales de cada plato.</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 56px; text-align: left">
+
+<article class="card rv" style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 14px; display: flex; flex-direction: column">
+<div class="pic" style="border-radius: 10px; overflow: hidden; background: radial-gradient(circle at 50% 45%, #2a1a12, #0f0f0f 70%); aspect-ratio: 4 / 3">
+<svg viewBox="0 0 300 225" style="width: 100%; height: 100%; display: block" role="img" aria-label="Uramaki (referencia)">
+<g transform="translate(90 120)"><circle r="46" fill="#efe9df"></circle><circle r="34" fill="#151b15"></circle><circle r="30" fill="#f6f1e8"></circle><circle r="12" cx="-5" cy="-3" fill="#F2814B"></circle><ellipse rx="7" ry="11" cx="11" cy="6" fill="#8fbf5a"></ellipse><g fill="#2a2a2a"><ellipse cx="-30" cy="-26" rx="2.4" ry="1.3"></ellipse><ellipse cx="28" cy="-30" rx="2.4" ry="1.3"></ellipse><ellipse cx="38" cy="16" rx="2.4" ry="1.3"></ellipse><ellipse cx="-36" cy="22" rx="2.4" ry="1.3"></ellipse></g></g>
+<g transform="translate(205 105)"><circle r="46" fill="#efe9df"></circle><circle r="34" fill="#151b15"></circle><circle r="30" fill="#f6f1e8"></circle><circle r="12" cx="-5" cy="-3" fill="#F2814B"></circle><ellipse rx="7" ry="11" cx="11" cy="6" fill="#8fbf5a"></ellipse><g fill="#2a2a2a"><ellipse cx="-30" cy="-26" rx="2.4" ry="1.3"></ellipse><ellipse cx="28" cy="-30" rx="2.4" ry="1.3"></ellipse><ellipse cx="38" cy="16" rx="2.4" ry="1.3"></ellipse></g></g>
+<path d="M40 70c40 30 80-20 120 10s80-10 110 20" fill="none" stroke="#3b1a0b" stroke-width="5" stroke-linecap="round"></path>
+<g fill="#F2814B"><circle cx="150" cy="180" r="3"></circle><circle cx="160" cy="186" r="3"></circle><circle cx="142" cy="188" r="3"></circle></g>
+</svg>
+</div>
+<h3 style="margin: 18px 4px 0; color: #F2814B; font-size: 17px; font-weight: 700">Uramaki de salmón</h3>
+<p style="margin: 8px 4px 0; color: #a39e96; font-size: 13px; line-height: 1.55; flex: 1">Arroz por fuera, salmón y aguacate por dentro. [Ajustar descripción real]</p>
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 18px 4px 4px">
+<span style="font-size: 20px; font-weight: 700">[PRECIO]</span>
+<button type="button" class="add" aria-label="Agregar Uramaki de salmón" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #3a3a3a; background: transparent; color: #f3eee6; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</div>
+</article>
+
+<article class="card rv2" style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 14px; display: flex; flex-direction: column">
+<div class="pic" style="border-radius: 10px; overflow: hidden; background: radial-gradient(circle at 50% 45%, #2a1a12, #0f0f0f 70%); aspect-ratio: 4 / 3">
+<svg viewBox="0 0 300 225" style="width: 100%; height: 100%; display: block" role="img" aria-label="Nigiri (referencia)">
+<rect x="40" y="150" width="220" height="16" rx="8" fill="#1d1d1d"></rect>
+<g transform="translate(105 120) scale(1.3)"><ellipse rx="46" ry="21" fill="#efe9df"></ellipse><path d="M-52 -6C-32 -32 32 -32 54 -8C42 5-42 7-52-6Z" fill="#F2814B"></path><path d="M-32-17-24 1M-11-21-3-1M10-21 18-1M31-17 37-3" stroke="#ffd2bb" stroke-width="3.5" stroke-linecap="round" opacity=".75"></path></g>
+<g transform="translate(205 112) scale(1.3)"><ellipse rx="46" ry="21" fill="#efe9df"></ellipse><path d="M-52 -6C-32 -32 32 -32 54 -8C42 5-42 7-52-6Z" fill="#e8673a"></path><path d="M-32-17-24 1M-11-21-3-1M10-21 18-1M31-17 37-3" stroke="#ffc3a6" stroke-width="3.5" stroke-linecap="round" opacity=".75"></path></g>
+</svg>
+</div>
+<h3 style="margin: 18px 4px 0; color: #F2814B; font-size: 17px; font-weight: 700">Nigiri de salmón</h3>
+<p style="margin: 8px 4px 0; color: #a39e96; font-size: 13px; line-height: 1.55; flex: 1">Lámina de salmón sobre arroz avinagrado. [Ajustar descripción real]</p>
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 18px 4px 4px">
+<span style="font-size: 20px; font-weight: 700">[PRECIO]</span>
+<button type="button" class="add" aria-label="Agregar Nigiri de salmón" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #3a3a3a; background: transparent; color: #f3eee6; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</div>
+</article>
+
+<article class="card rv3" style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 14px; display: flex; flex-direction: column">
+<div class="pic" style="border-radius: 10px; overflow: hidden; background: radial-gradient(circle at 50% 45%, #2a1a12, #0f0f0f 70%); aspect-ratio: 4 / 3">
+<svg viewBox="0 0 300 225" style="width: 100%; height: 100%; display: block" role="img" aria-label="Tempura roll (referencia)">
+<g transform="translate(80 115)"><circle r="42" fill="#d9a441"></circle><circle r="30" fill="#151b15"></circle><circle r="26" fill="#f6f1e8"></circle><circle r="10" fill="#F2814B"></circle><path d="M-40-8l-8-4M-36 20l-8 5M38-14l9-4M30 28l7 6M0-42v-8M-20-37l-4-7M20-37l4-7" stroke="#b9822a" stroke-width="3" stroke-linecap="round"></path></g>
+<g transform="translate(160 125)"><circle r="42" fill="#d9a441"></circle><circle r="30" fill="#151b15"></circle><circle r="26" fill="#f6f1e8"></circle><circle r="10" fill="#F2814B"></circle><path d="M-40-8l-8-4M-36 20l-8 5M38-14l9-4M30 28l7 6M0-42v-8" stroke="#b9822a" stroke-width="3" stroke-linecap="round"></path></g>
+<g transform="translate(240 110)"><circle r="42" fill="#d9a441"></circle><circle r="30" fill="#151b15"></circle><circle r="26" fill="#f6f1e8"></circle><circle r="10" fill="#F2814B"></circle><path d="M-40-8l-8-4M38-14l9-4M30 28l7 6M0-42v-8" stroke="#b9822a" stroke-width="3" stroke-linecap="round"></path></g>
+<path d="M50 70l25 10 25-10 25 10 25-10 25 10 25-10 25 10 25-10" fill="none" stroke="#3b1a0b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<h3 style="margin: 18px 4px 0; color: #F2814B; font-size: 17px; font-weight: 700">Tempura roll</h3>
+<p style="margin: 8px 4px 0; color: #a39e96; font-size: 13px; line-height: 1.55; flex: 1">Roll empanizado y crujiente con salsa de anguila. [Ajustar descripción real]</p>
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 18px 4px 4px">
+<span style="font-size: 20px; font-weight: 700">[PRECIO]</span>
+<button type="button" class="add" aria-label="Agregar Tempura roll" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #3a3a3a; background: transparent; color: #f3eee6; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</div>
+</article>
+
+<article class="card rv4" style="background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 14px; display: flex; flex-direction: column">
+<div class="pic" style="border-radius: 10px; overflow: hidden; background: radial-gradient(circle at 50% 45%, #2a1a12, #0f0f0f 70%); aspect-ratio: 4 / 3">
+<svg viewBox="0 0 300 225" style="width: 100%; height: 100%; display: block" role="img" aria-label="Sashimi (referencia)">
+<path d="M70 150c20-50 70-70 120-60-30 10-60 40-70 70z" fill="#5c8f3a"></path><path d="M75 148c30-30 60-45 105-55" stroke="#8fbf5a" stroke-width="2" fill="none"></path>
+<g transform="translate(150 120)">
+<path d="M-70 10c20-30 60-36 90-20-20 10-60 24-90 20z" fill="#e8673a"></path>
+<path d="M-50 22c22-28 62-30 90-12-22 10-62 20-90 12z" fill="#F2814B"></path>
+<path d="M-30 34c22-26 62-26 88-8-22 10-62 16-88 8z" fill="#f5915f"></path>
+<path d="M-10 46c22-24 60-22 86-4-22 8-60 14-86 4z" fill="#F2814B"></path>
+<path d="M-40 14l50-14M-20 26l50-12M0 38l50-10" stroke="#ffd2bb" stroke-width="2.5" opacity=".7" stroke-linecap="round"></path>
+</g>
+<path d="M232 170c8-12 28-8 26 6-2 10-22 14-28 6z" fill="#8fbf5a"></path>
+</svg>
+</div>
+<h3 style="margin: 18px 4px 0; color: #F2814B; font-size: 17px; font-weight: 700">Sashimi de salmón</h3>
+<p style="margin: 8px 4px 0; color: #a39e96; font-size: 13px; line-height: 1.55; flex: 1">Cortes finos de salmón fresco con shiso. [Ajustar descripción real]</p>
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 18px 4px 4px">
+<span style="font-size: 20px; font-weight: 700">[PRECIO]</span>
+<button type="button" class="add" aria-label="Agregar Sashimi de salmón" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #3a3a3a; background: transparent; color: #f3eee6; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</div>
+</article>
+</div>
+<div class="rv" style="margin-top: 48px"><a href="https://www.instagram.com/blacksushi.ve/" class="btn btnG">Ver menú completo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+</section>
+
+<!-- STORY -->
+<section id="historia" style="max-width: 1240px; margin: 0 auto; padding: 120px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
+<div style="flex: 1 1 380px; min-width: 0">
+<div class="rv" style="color: #F2814B; font-size: 12px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase">Nuestra historia</div>
+<h2 class="rv" style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 800; font-size: clamp(32px, 4vw, 48px); line-height: 1.15">Pasión en cada <span style="color: #F2814B">pieza</span></h2>
+<p class="rv2" style="margin: 24px 0 0; color: #a39e96; font-size: 16px; line-height: 1.75; max-width: 460px">[Historia real de Black Sushi: cómo nació, quién está detrás y qué los hace distintos. 2–3 frases.]</p>
+<div class="rv2" style="margin-top: 26px; font-family: 'Shippori Mincho', serif; font-size: 26px; color: #F2814B; letter-spacing: .1em">黒 寿司</div>
+<div class="rv3" style="display: flex; flex-wrap: wrap; gap: 36px; margin-top: 44px">
+<div style="border-left: 1px solid #F2814B; padding-left: 16px"><div style="font-size: 30px; font-weight: 700; color: #F2814B">[X]+</div><div style="color: #a39e96; font-size: 13px; margin-top: 4px">Años de experiencia</div></div>
+<div style="border-left: 1px solid #F2814B; padding-left: 16px"><div style="font-size: 30px; font-weight: 700; color: #F2814B">[X]+</div><div style="color: #a39e96; font-size: 13px; margin-top: 4px">Rolls en el menú</div></div>
+<div style="border-left: 1px solid #F2814B; padding-left: 16px"><div style="font-size: 30px; font-weight: 700; color: #F2814B">[X]k+</div><div style="color: #a39e96; font-size: 13px; margin-top: 4px">Seguidores</div></div>
+</div>
+</div>
+<div class="rv2" style="flex: 1 1 520px; min-width: 0; display: grid; grid-template-columns: 2fr 1fr; gap: 16px">
+<div style="grid-row: span 2; min-height: 420px; border-radius: 16px; border: 1px solid #262626; background: radial-gradient(circle at 50% 40%, #24170f, #0e0e0e 70%); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center">
+<div aria-hidden="true" style="position: absolute; font-family: 'Shippori Mincho', serif; font-weight: 800; font-size: 300px; color: #1a1612; line-height: 1">黒</div>
+<svg viewBox="0 0 240 240" style="width: 70%; max-width: 280px; position: relative" role="img" aria-label="Roll ilustrado (referencia)">
+<g class="spin" style="transform-origin: 120px 120px"><circle cx="120" cy="120" r="100" fill="#efe9df"></circle><circle cx="120" cy="120" r="76" fill="#151b15"></circle><circle cx="120" cy="120" r="68" fill="#f6f1e8"></circle><circle cx="110" cy="112" r="26" fill="#F2814B"></circle><ellipse cx="146" cy="132" rx="16" ry="24" fill="#8fbf5a"></ellipse><g fill="#2a2a2a"><ellipse cx="60" cy="60" rx="5" ry="2.6"></ellipse><ellipse cx="180" cy="56" rx="5" ry="2.6"></ellipse><ellipse cx="196" cy="150" rx="5" ry="2.6"></ellipse><ellipse cx="50" cy="160" rx="5" ry="2.6"></ellipse><ellipse cx="120" cy="208" rx="5" ry="2.6"></ellipse></g></g>
+</svg>
+<div style="position: absolute; left: 16px; bottom: 14px; font-size: 11px; letter-spacing: .14em; color: #8a857d; text-transform: uppercase">Foto del chef · pendiente</div>
+</div>
+<div style="min-height: 200px; border-radius: 16px; border: 1px dashed #3a3a3a; display: flex; align-items: center; justify-content: center; text-align: center; color: #8a857d; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; padding: 12px">Foto del local<br>[pendiente]</div>
+<div style="min-height: 200px; border-radius: 16px; border: 1px dashed #3a3a3a; display: flex; align-items: center; justify-content: center; text-align: center; color: #8a857d; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; padding: 12px">Foto de empaque<br>[pendiente]</div>
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section id="resenas" style="max-width: 1240px; margin: 0 auto; padding: 40px 24px 120px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px">
+<div>
+<div class="rv" style="color: #F2814B; font-size: 12px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase">Lo que dicen nuestros clientes</div>
+<h2 class="rv" style="margin: 16px 0 0; font-family: 'Shippori Mincho', serif; font-weight: 800; font-size: clamp(32px, 4vw, 48px); line-height: 1.15">Experiencias <span style="color: #F2814B">inolvidables</span></h2>
+</div>
+<div class="rv2" style="text-align: right; color: #a39e96; font-size: 14px"><span style="color: #F2814B; font-size: 22px; letter-spacing: 4px">★★★★★</span><br>[Calificación real y nº de reseñas]</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 48px">
+<figure class="quote rv" style="margin: 0; background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 28px">
+<div style="display: flex; justify-content: space-between; align-items: center"><div style="width: 48px; height: 48px; border-radius: 50%; border: 1px solid #F2814B; background: #1e1e1e"></div><span aria-hidden="true" style="font-family: 'Shippori Mincho', serif; font-size: 56px; color: #F2814B; line-height: .6">”</span></div>
+<blockquote style="margin: 22px 0 0; color: #d8d2c8; font-size: 15px; line-height: 1.65">[Reseña real de un cliente — copiar de comentarios de Instagram o Google]</blockquote>
+<div style="height: 1px; background: linear-gradient(90deg,#F2814B,transparent); margin: 22px 0 16px"></div>
+<figcaption><div style="color: #F2814B; font-weight: 700; font-size: 14px">[Nombre]</div><div style="color: #8a857d; font-size: 13px; margin-top: 3px">Cliente</div></figcaption>
+</figure>
+<figure class="quote rv2" style="margin: 0; background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 28px">
+<div style="display: flex; justify-content: space-between; align-items: center"><div style="width: 48px; height: 48px; border-radius: 50%; border: 1px solid #F2814B; background: #1e1e1e"></div><span aria-hidden="true" style="font-family: 'Shippori Mincho', serif; font-size: 56px; color: #F2814B; line-height: .6">”</span></div>
+<blockquote style="margin: 22px 0 0; color: #d8d2c8; font-size: 15px; line-height: 1.65">[Reseña real de un cliente — copiar de comentarios de Instagram o Google]</blockquote>
+<div style="height: 1px; background: linear-gradient(90deg,#F2814B,transparent); margin: 22px 0 16px"></div>
+<figcaption><div style="color: #F2814B; font-weight: 700; font-size: 14px">[Nombre]</div><div style="color: #8a857d; font-size: 13px; margin-top: 3px">Cliente</div></figcaption>
+</figure>
+<figure class="quote rv3" style="margin: 0; background: #141414; border: 1px solid #262626; border-radius: 14px; padding: 28px">
+<div style="display: flex; justify-content: space-between; align-items: center"><div style="width: 48px; height: 48px; border-radius: 50%; border: 1px solid #F2814B; background: #1e1e1e"></div><span aria-hidden="true" style="font-family: 'Shippori Mincho', serif; font-size: 56px; color: #F2814B; line-height: .6">”</span></div>
+<blockquote style="margin: 22px 0 0; color: #d8d2c8; font-size: 15px; line-height: 1.65">[Reseña real de un cliente — copiar de comentarios de Instagram o Google]</blockquote>
+<div style="height: 1px; background: linear-gradient(90deg,#F2814B,transparent); margin: 22px 0 16px"></div>
+<figcaption><div style="color: #F2814B; font-weight: 700; font-size: 14px">[Nombre]</div><div style="color: #8a857d; font-size: 13px; margin-top: 3px">Cliente</div></figcaption>
+</figure>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="rv" style="max-width: 1240px; margin: 0 auto 100px; padding: 0 24px">
+<div style="border: 1px solid #2a2a2a; border-radius: 20px; padding: 56px 40px; background: radial-gradient(circle at 85% 50%, rgba(242,129,75,.16), transparent 55%), #121212; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px">
+<div><h2 style="margin: 0; font-family: 'Shippori Mincho', serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 42px)">¿Antojo de sushi?</h2><p style="margin: 10px 0 0; color: #a39e96; font-size: 16px">Haz tu pedido y te lo llevamos a la puerta.</p></div>
+<a href="https://www.instagram.com/blacksushi.ve/" class="btn btnP">Pedir ahora <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contacto" style="border-top: 1px solid #1f1f1f">
+<div style="max-width: 1240px; margin: 0 auto; padding: 64px 24px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 40px">
+<div class="rv">
+<div style="display: flex; align-items: center; gap: 10px"><svg width="28" height="28" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="none" stroke="#F2814B" stroke-width="1.5"></circle><circle cx="17" cy="17" r="7" fill="#F2814B"></circle></svg><span style="font-family: 'Shippori Mincho', serif; font-weight: 800; font-size: 19px; letter-spacing: .06em">BLACK SUSHI</span></div>
+<p style="color: #a39e96; font-size: 14px; line-height: 1.7; margin: 18px 0 0">Sushi de autor, fresco y hecho al momento.</p>
+<div style="display: flex; gap: 10px; margin-top: 20px">
+<a href="https://www.instagram.com/blacksushi.ve/" class="soc" aria-label="Instagram de Black Sushi" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #F2814B; color: #F2814B; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a>
+<a href="https://wa.me/" class="soc" aria-label="WhatsApp de Black Sushi" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #F2814B; color: #F2814B; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20l1.4-4A8 8 0 1 1 8 18.6z"></path><path d="M9 9c0 3 3 6 6 6l1-1.5-2-1-1 1c-1-.5-2-1.5-2.5-2.5l1-1-1-2z"></path></svg></a>
+</div>
+</div>
+<nav class="rv2" aria-label="Enlaces rápidos"><div style="font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase">Enlaces</div>
+<div style="display: flex; flex-direction: column; gap: 12px; margin-top: 18px; font-size: 14px; color: #a39e96"><a href="#inicio" style="color: #a39e96">Inicio</a><a href="#menu" style="color: #a39e96">Menú</a><a href="#historia" style="color: #a39e96">Nosotros</a><a href="#resenas" style="color: #a39e96">Reseñas</a></div></nav>
+<div class="rv3"><div style="font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase">Contacto</div>
+<div style="display: flex; flex-direction: column; gap: 14px; margin-top: 18px; font-size: 14px; color: #a39e96">
+<div style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F2814B" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>[DIRECCIÓN, CIUDAD]</div>
+<div style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F2814B" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg>[WHATSAPP]</div>
+<div style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F2814B" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>@blacksushi.ve</div>
+<div style="display: flex; gap: 10px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F2814B" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>[HORARIO]</div>
+</div></div>
+<div class="rv4"><div style="font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase">Novedades</div>
+<p style="color: #a39e96; font-size: 14px; line-height: 1.6; margin: 18px 0 0">Recibe promos y nuevos rolls.</p>
+<form style="display: flex; margin-top: 16px; border: 1px solid #333; border-radius: 6px; overflow: hidden">
+<label for="nl" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Correo</label>
+<input id="nl" type="email" placeholder="Tu correo" style="flex: 1; min-width: 0; background: transparent; border: 0; color: #f3eee6; padding: 0 14px; height: 46px; font: 14px Manrope, sans-serif">
+<button type="button" style="background: #F2814B; color: #0a0a0a; border: 0; padding: 0 16px; font: 700 12px Manrope, sans-serif; letter-spacing: .08em; text-transform: uppercase; cursor: pointer">Unirme</button>
+</form></div>
+</div>
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px 32px"><div style="height: 1px; background: linear-gradient(90deg,transparent,#F2814B,transparent)"></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-top: 22px; font-size: 12px; color: #8a857d"><span>© 2026 Black Sushi. Todos los derechos reservados.</span><span>Imágenes ilustrativas de referencia</span></div></div>
+</footer>
+</div>
+
+</body>
+</html>
